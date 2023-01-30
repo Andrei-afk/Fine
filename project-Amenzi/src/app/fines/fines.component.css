@@ -1,0 +1,8 @@
+.container {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+  }
+  .align {
+    margin-top: 5%;
+    margin-left: 5%;
+  }

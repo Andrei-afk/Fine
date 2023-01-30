@@ -1,0 +1,20 @@
+<div>
+    <div *ngIf="flag!==1">
+        <table class="margin">
+            <tr>
+                <td style="padding-left:70%">
+                    <app-login></app-login>
+                </td>
+                <td style="padding-left:270%">
+                    <app-register></app-register>
+                </td>
+            </tr>
+        </table>
+    </div>
+       
+    <div *ngIf="flag===1">
+        <app-fines></app-fines>
+    </div>
+</div>
+
+

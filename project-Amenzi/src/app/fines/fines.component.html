@@ -1,0 +1,180 @@
+<!--Admin -add fines-->
+<div *ngIf="flag"> 
+
+    <form (ngSubmit)="onSubmit()" class="align">
+        <mat-form-field style="width:350px;" >
+            <mat-label>Marca masina:</mat-label>
+            <input matInput placeholder="Marca masina" value="Marca masina" [(ngModel)]="carCompany" name="carCompany" type="text">
+        </mat-form-field>
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Culoare masina:</mat-label>
+            <input matInput placeholder="Culoare masina" value="Culoare masina" [(ngModel)]="color" name="color" type="text">
+        </mat-form-field>
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Numar de inmatriculare:</mat-label>
+            <input matInput placeholder="Numar de inmatriculare" value="Numar de inmatriculare:" [(ngModel)]="licensePlate" name="licensePlate" type="text">
+        </mat-form-field>
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Data cand a fost parcata ilegal masina:</mat-label>
+            <input matInput placeholder="Data" value="Data" [(ngModel)]="calendarDate" name="calendarDate" type="text">
+        </mat-form-field>
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Ora de la care a fost parcata ilegal masina:</mat-label>
+            <input matInput placeholder="De la ora" value="De la ora" [(ngModel)]="hourFrom" name="hourFrom" type="text">
+        </mat-form-field>
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Ora pana la care a fost parcata ilegal masina:</mat-label>
+            <input matInput placeholder="Pana la ora" value="Pana la ora" [(ngModel)]="hourTo" name="hourTo" type="text">
+        </mat-form-field>
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Adresa la care a fost parcata ilegal masina - Judet</mat-label>
+            <input matInput placeholder="Judet" value="Judet" [(ngModel)]="county" name="County" type="text">
+        </mat-form-field>
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Adresa la care a fost parcata ilegal masina - Oras</mat-label>
+            <input matInput placeholder="Oras" value="Oras" [(ngModel)]="city" name="City" type="text">
+        </mat-form-field>
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Adresa la care a fost parcata ilegal masina - Strada</mat-label>
+            <input matInput placeholder="Strada" value="Strada" [(ngModel)]="street" name="Street" type="text">
+        </mat-form-field>     
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Adresa la care a fost parcata ilegal masina - Numar</mat-label>
+            <input matInput placeholder="Numar" value="Numar" [(ngModel)]="number" name="Number" type="text">
+        </mat-form-field>  
+        <br>  
+        <mat-form-field style="width:350px;" >
+            <mat-label>Articolul de lege</mat-label>
+            <input matInput placeholder="Articolul de lege" value="Articolul de lege" [(ngModel)]="lawNumber" name="lawNumber" type="text">
+        </mat-form-field>    
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Numarul legii</mat-label>
+            <input matInput placeholder="Numarul legii" value="Numarul legii" [(ngModel)]="lawDescription" name="lawDescription" type="text">
+        </mat-form-field>  
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Puncte penalizare</mat-label>
+            <input matInput placeholder="Puncte penalizare" value="Puncte penalizare" [(ngModel)]="pointsDeducted" name="pointsDeducted" type="text">
+        </mat-form-field>  
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Suma amenda</mat-label>
+            <input matInput placeholder="Suma amenda" value="Suma amenda" [(ngModel)]="fineAmount" name="fineAmount" type="text">
+        </mat-form-field>  
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Nume politist</mat-label>
+            <input matInput placeholder="Nume politist" value="Nume politist" [(ngModel)]="policemanName" name="policemanName" type="text">
+        </mat-form-field>  
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Nume proprietar</mat-label>
+            <input matInput placeholder="Nume proprietar" value="Nume proprietar" [(ngModel)]="driverName" name="driverName" type="text">
+        </mat-form-field>  
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>CNP - proprietar</mat-label>
+            <input matInput placeholder="CNP - proprietar" value="CNP - proprietar" [(ngModel)]="cnp" name="cnp" type="text">
+        </mat-form-field>  
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Serie de buletin - proprietar</mat-label>
+            <input matInput placeholder="Serie de buletin - proprietar" value="Serie de buletin - proprietar" [(ngModel)]="series" name="series" type="text">
+        </mat-form-field>  
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Numar de buletin - proprietar</mat-label>
+            <input matInput placeholder="Numar de buletin - proprietar" value="Numar de buletin - proprietar" [(ngModel)]="seriesNumber" name="seriesNumber" type="text">
+        </mat-form-field>  
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Adresa proprietar - judet</mat-label>
+            <input matInput placeholder="Adresa proprietar - judet" value="Adresa proprietar - judet" [(ngModel)]="countyDriver" name="CountyDriver" type="text">
+        </mat-form-field>  
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Adresa proprietar - oras</mat-label>
+            <input matInput placeholder="Adresa proprietar - oras" value="Adresa proprietar - oras" [(ngModel)]="cityDriver" name="CityDriver" type="text">
+        </mat-form-field>  
+        <br>
+        <mat-form-field style="width:350px;" >
+            <mat-label>Adresa proprietar - strada</mat-label>
+            <input matInput placeholder="Adresa proprietar - strada" value="Adresa proprietar - strada" [(ngModel)]="streetDriver" name="StreetDriver" type="text">
+        </mat-form-field>  
+        <br> 
+        <mat-form-field style="width:350px;" >
+            <mat-label>Adresa proprietar - numar</mat-label>
+            <input matInput placeholder="Adresa proprietar - numar" value="Adresa proprietar - numar" [(ngModel)]="numberDriver" name="NumberDriver" type="text">
+        </mat-form-field>  
+        <br>                 
+
+
+
+        <button mat-button color="warn" type="submit">Adauga amenda</button>
+    </form>
+
+
+</div>
+
+<div *ngIf="flag===false">
+
+    <table>
+        <tr>
+            <td>
+                <ul>
+                    <div  *ngFor="let item of fines" >
+                        
+                        <mat-card (click)="selectFine( item )">
+                            <mat-card-header>
+                              <mat-card-title>Amenda</mat-card-title>
+                              <mat-card-subtitle>
+                                <p>Data: {{item.dateInformation.calendarDate}}</p>
+                                <p>Numar de înmatriculare: {{item.car.licensePlate}}</p>
+                            </mat-card-subtitle>
+                            </mat-card-header>
+                          </mat-card>
+                          <br>
+                        </div>
+                </ul>
+            </td>
+            <td *ngIf = "currentFine" style="padding-left:10%">
+                <h1 align="center">DIRECȚIA POLIȚIE LOCALĂ</h1>
+                <table>
+                    <tr>
+                        <td align="left">SERVICIUL CIRCULAȚIE PE DRUMURILE PUBLICE</td>
+                        <td align="right" style="width : 90%">
+                             <p>În atenția proprietarului</p> 
+                             <p>Autovehiculului marca {{currentFine.car.carCompany}}, culoare {{currentFine.car.color}}</p>
+                             <p>Număr de înmatriculare: {{currentFine.car.licensePlate}} </p>
+                        </td>
+                    </tr>
+                </table>
+                <h2 align="center"><u>COMUNICARE</u></h2>
+                <p> Vă facem cunoscut că în data de {{currentFine.dateInformation.calendarDate}} intervalul orar {{currentFine.dateInformation.dayDateStart}}-{{currentFine.dateInformation.dayDateFinish}}
+                    , Autovehiculul dvs. cu datele menționate mai sus, a fost depistat staționând neregulamentar în județul {{ currentFine.fineAddress.county}},
+                orașul {{currentFine.fineAddress.city}}, pe strada {{currentFine.fineAddress.street}} în dreptul imobilului cu numărul {{currentFine.fineAddress.number}}</p>
+                <p> Conform Prevederilor art. 63/5 din OUG 195/2020 fapta se sacționează cu {{currentFine.penalty.fineAmount}} lei și {{currentFine.penalty.pointsDeducted}} 
+                    puncte de penalizare.</p>
+                <p>Pe baza notei de constantare, se va întocmi un în lipsă, proces verbal de constantare și sancționare a contravențiilor și va fi adus la cunoștiița 
+                    proprietarului autoturismului prin plic cu confirmare de primire sau afișare, conform ar. 27 din OG 2/2001.
+                </p>
+                <p>
+                    Reclamații și sesizări se vor depune la sediul societății, în scris, în termen de 48 de ore de la prima primire a prezenței.
+                </p>
+                <p align="right"> Agent constatator: {{currentFine.policemanName}}</p>
+            </td>
+
+        </tr>
+    </table>
+    
+</div>

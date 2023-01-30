@@ -1,0 +1,35 @@
+<form *ngIf="displayForm===1" (ngSubmit)="onSubmit()">
+
+  <mat-form-field >
+    <mat-label>Email:</mat-label>
+    <input matInput placeholder="email@email.com" value="email@email.com" [(ngModel)]="email" name="email" type="email">
+  </mat-form-field>
+  <br>
+  <mat-form-field >
+    <mat-label>Parola:</mat-label>
+    <input matInput placeholder="Parola" value="Parola" [(ngModel)]="password" name="password" type="password">
+  </mat-form-field>
+  <br>
+  <mat-form-field >
+    <mat-label>CNP:</mat-label>
+    <input matInput placeholder="CNP" value="CNP" [(ngModel)]="cnp" name="cnp" type="number">
+  </mat-form-field>
+  <br>
+  <mat-form-field >
+    <mat-label>Serie Buletin:</mat-label>
+    <input matInput placeholder="Serie Buletin" value="Serie Buletin" [(ngModel)]="serie" name="serie" type="text">
+  </mat-form-field>
+  <br>
+  <mat-form-field >
+    <mat-label>Serie Buletin:</mat-label>
+    <input matInput placeholder="Numar Buletin" value="Numar Buletin" [(ngModel)]="numar" name="numar" type="text">
+  </mat-form-field>
+  <br>
+
+    <button mat-button color="warn" type="submit">Register</button>
+  </form>
+
+
+<label *ngIf="success===0">Adresa de email este deja folosita</label>
+  
+<app-fines *ngIf="displayForm===0"></app-fines>

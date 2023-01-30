@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()">
+    <table>
+      <mat-form-field >
+        <mat-label>Email:</mat-label>
+        <input matInput placeholder="email@email.com" value="email@email.com" [(ngModel)]="email" name="email" type="email">
+      </mat-form-field>
+      <br>
+      <mat-form-field >
+        <mat-label>Parola:</mat-label>
+        <input matInput placeholder="Parola" value="Parola" [(ngModel)]="password" name="password" type="password">
+      </mat-form-field>
+      <br>
+      <mat-form-field >
+        <mat-label>CNP:</mat-label>
+        <input matInput placeholder="CNP" value="CNP" [(ngModel)]="cnp" name="cnp" type="number">
+      </mat-form-field>
+      <br>
+      <button mat-button color="warn" type="submit">Login</button>
+    </table>
+    
+  </form>

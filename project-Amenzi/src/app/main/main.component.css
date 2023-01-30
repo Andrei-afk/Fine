@@ -1,0 +1,13 @@
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+.margin{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 50px;
+}
+
